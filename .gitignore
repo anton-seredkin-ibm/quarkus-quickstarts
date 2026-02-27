@@ -11,9 +11,9 @@ buildNumber.properties
 # Avoid ignoring Maven wrapper jar file (.jar files are usually ignored)
 !/.mvn/wrapper/maven-wrapper.jar
 
-.gradle/
 build/
 .gradletasknamecache
+.gradle/
 
 *.log
 graph-output.dot
@@ -39,3 +39,8 @@ lsp/
 *.swo
 
 .quarkus
+
+# Ignore Gradle project-specific cache directory
+
+# Ignore Gradle build output directory
+build
