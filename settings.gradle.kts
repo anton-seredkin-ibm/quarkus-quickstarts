@@ -25,6 +25,7 @@ rootProject.name = "quarkus-quickstarts"
 // include("getting-started")
 // include("getting-started-async")
 include("getting-started-reactive")
+include("kafka-streams-quickstart:aggregator")
 // include("getting-started-reactive-crud")
 // include("getting-started-knative")
 // include("getting-started-testing")

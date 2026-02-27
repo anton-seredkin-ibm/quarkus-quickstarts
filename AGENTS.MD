@@ -22,6 +22,9 @@
 - `./gradlew integrationTest` BUILD SUCCESSFUL (getting-started-reactive)
 - `./gradlew quarkusBuild -Dquarkus.container-image.builder=jib -Dquarkus.container-image.build=true` BUILD SUCCESSFUL (getting-started-reactive)
 - `./gradlew quarkusBuild -Dquarkus.container-image.builder=jib -Dquarkus.container-image.build=true` BUILD SUCCESSFUL (getting-started-reactive, base image set via gradle.properties to UBI9 OpenJDK 21 `latest`)
+- `./gradlew :kafka-streams-quickstart:aggregator:testClasses` BUILD SUCCESSFUL (kafka-streams-quickstart/aggregator)
+- `./gradlew :kafka-streams-quickstart:aggregator:test` FAILED (no Docker environment available for Testcontainers)
+- `./gradlew :kafka-streams-quickstart:aggregator:quarkusBuild -Dquarkus.container-image.builder=jib -Dquarkus.container-image.build=true -Dquarkus.container-image.name=quarkus-kafka-streams-aggregator -Dquarkus.container-image.tag=latest` BUILD SUCCESSFUL (kafka-streams-quickstart/aggregator)
 
 ## Docker Host Access (ubuntu-lan)
 
