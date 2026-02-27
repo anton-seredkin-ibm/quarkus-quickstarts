@@ -16,4 +16,5 @@ subprojects {
         add("implementation", enforcedPlatform("io.quarkus.platform:quarkus-bom:$quarkusPlatformVersion"))
         add("implementation", "io.quarkus:quarkus-container-image-jib")
     }
+
 }

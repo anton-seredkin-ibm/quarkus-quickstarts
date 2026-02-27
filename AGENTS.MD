@@ -21,3 +21,16 @@
 - `./gradlew test` BUILD SUCCESSFUL (getting-started-reactive)
 - `./gradlew integrationTest` BUILD SUCCESSFUL (getting-started-reactive)
 - `./gradlew quarkusBuild -Dquarkus.container-image.builder=jib -Dquarkus.container-image.build=true` BUILD SUCCESSFUL (getting-started-reactive)
+- `./gradlew quarkusBuild -Dquarkus.container-image.builder=jib -Dquarkus.container-image.build=true` BUILD SUCCESSFUL (getting-started-reactive, base image set via gradle.properties to UBI9 OpenJDK 21 `latest`)
+
+## Docker Host Access (ubuntu-lan)
+
+- The Docker daemon runs on `ubuntu-lan` and is firewalled.
+- Use SSH port forwarding to access container ports from this host.
+- Example:
+  - Start container on `ubuntu-lan` (port published to host).
+  - On this machine, forward a local port:
+    - `ssh -N -L 18080:localhost:<HOST_PORT> ubuntu-lan`
+  - Test locally:
+    - `curl http://localhost:18080/hello`
+  - Stop forwarding by terminating the SSH process (Ctrl+C).
