@@ -17,14 +17,9 @@
 
 ## Latest Build Status
 
-- `./gradlew testClasses` BUILD SUCCESSFUL (getting-started-reactive)
-- `./gradlew test` BUILD SUCCESSFUL (getting-started-reactive)
-- `./gradlew integrationTest` BUILD SUCCESSFUL (getting-started-reactive)
-- `./gradlew quarkusBuild -Dquarkus.container-image.builder=jib -Dquarkus.container-image.build=true` BUILD SUCCESSFUL (getting-started-reactive)
-- `./gradlew quarkusBuild -Dquarkus.container-image.builder=jib -Dquarkus.container-image.build=true` BUILD SUCCESSFUL (getting-started-reactive, base image set via gradle.properties to UBI9 OpenJDK 21 `latest`)
-- `./gradlew :kafka-streams-quickstart:aggregator:testClasses` BUILD SUCCESSFUL (kafka-streams-quickstart/aggregator)
-- `./gradlew :kafka-streams-quickstart:aggregator:test` FAILED (no Docker environment available for Testcontainers)
-- `./gradlew :kafka-streams-quickstart:aggregator:quarkusBuild -Dquarkus.container-image.builder=jib -Dquarkus.container-image.build=true -Dquarkus.container-image.name=quarkus-kafka-streams-aggregator -Dquarkus.container-image.tag=latest` BUILD SUCCESSFUL (kafka-streams-quickstart/aggregator)
+- `./gradlew :getting-started-reactive:test` BUILD SUCCESSFUL (`*IT` tests excluded from `test`)
+- `./gradlew :kafka-streams-quickstart:aggregator:testClasses` BUILD SUCCESSFUL
+- `./gradlew :getting-started-reactive:quarkusBuild :kafka-streams-quickstart:aggregator:quarkusBuild -Dquarkus.container-image.builder=jib -Dquarkus.container-image.build=true -Dquarkus.container-image.push=false` BUILD SUCCESSFUL (UBI9 OpenJDK 21 base image via gradle.properties)
 
 ## Docker Host Access (ubuntu-lan)
 

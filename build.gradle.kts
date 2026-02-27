@@ -17,4 +17,9 @@ subprojects {
         add("implementation", "io.quarkus:quarkus-container-image-jib")
     }
 
+    tasks.withType<Test>().configureEach {
+        // Quarkus integration tests should run via quarkusIntegrationTest/native-test, not unit test task.
+        exclude("**/*IT.*")
+    }
+
 }
